@@ -1,5 +1,6 @@
 package com.kevin.strategy.sample.modules.order.service.factory;
 
+import com.google.common.collect.Lists;
 import com.kevin.strategy.sample.modules.order.annotaion.OrderType;
 import com.kevin.strategy.sample.modules.order.service.OrderService;
 
@@ -35,14 +36,16 @@ public class OrderServiceFactory {
 
     private final AtomicBoolean initialize = new AtomicBoolean(false);
 
-    private volatile List<OrderService> orderServiceList;
+    private final List<OrderService> orderServiceList = Lists.newArrayList();
 
-    synchronized void initializedOrderServiceList() {
+    void initializedOrderServiceList() {
         if (initialize.get()) {
             return;
         }
-        orderServiceList = Arrays.asList(normalOrderService, promotionOrderService, grouponOrderService);
-        initialize.set(true);
+        orderServiceList.add(normalOrderService);
+        orderServiceList.add(promotionOrderService);
+        orderServiceList.add(grouponOrderService);
+        initialize.compareAndSet(false, true);
     }
 
     public OrderService getByOrderType(String orderType) {
