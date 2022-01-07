@@ -5,7 +5,11 @@ import static com.kevin.strategy.sample.modules.order.enums.OrderTypeEnum.PROMOT
 import com.kevin.strategy.sample.modules.order.annotaion.OrderType;
 import com.kevin.strategy.sample.modules.order.entity.dto.OrderDTO;
 import com.kevin.strategy.sample.modules.order.service.AbstractOrderService;
+
+import javax.inject.Named;
 import javax.inject.Singleton;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * 促销订单服务
@@ -16,8 +20,9 @@ import javax.inject.Singleton;
 @Singleton
 public class PromotionOrderServiceImpl extends AbstractOrderService {
 
-  @Override
-  public double discount(OrderDTO orderDTO) {
-    return 0;
-  }
+    @Override
+    public double discount(OrderDTO orderDTO) {
+        Logger.getGlobal().log(Level.INFO, "促销订单");
+        return 0;
+    }
 }
