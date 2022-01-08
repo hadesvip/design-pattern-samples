@@ -1,15 +1,13 @@
 package com.kevin.strategy.sample.modules.order.service.impl;
 
+import static com.kevin.strategy.sample.modules.order.enums.OrderTypeEnum.NORMAL;
+
 import com.kevin.strategy.sample.modules.order.annotaion.OrderType;
 import com.kevin.strategy.sample.modules.order.entity.dto.OrderDTO;
 import com.kevin.strategy.sample.modules.order.service.AbstractOrderService;
-
-import javax.inject.Singleton;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import static com.kevin.strategy.sample.modules.order.enums.OrderTypeEnum.NORMAL;
+import javax.inject.Singleton;
 
 /**
  * @author kevin

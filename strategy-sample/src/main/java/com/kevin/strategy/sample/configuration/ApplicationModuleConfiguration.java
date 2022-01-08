@@ -12,10 +12,13 @@ import com.kevin.strategy.sample.modules.order.service.impl.PromotionOrderServic
  */
 public class ApplicationModuleConfiguration extends AbstractModule {
 
-    @Override
-    protected void configure() {
-        bind(OrderService.class).annotatedWith(Names.named("normalOrderService")).to(NormalOrderServiceImpl.class);
-        bind(OrderService.class).annotatedWith(Names.named("promotionOrderService")).to(PromotionOrderServiceImpl.class);
-        bind(OrderService.class).annotatedWith(Names.named("grouponOrderService")).to(GrouponOrderServiceImpl.class);
-    }
+  @Override
+  protected void configure() {
+    bind(OrderService.class).annotatedWith(Names.named("normalOrderService"))
+        .to(NormalOrderServiceImpl.class);
+    bind(OrderService.class).annotatedWith(Names.named("promotionOrderService"))
+        .to(PromotionOrderServiceImpl.class);
+    bind(OrderService.class).annotatedWith(Names.named("grouponOrderService"))
+        .to(GrouponOrderServiceImpl.class);
+  }
 }

@@ -23,5 +23,4 @@ public enum OrderTypeEnum {
   PROMOTION
 
 
-
 }

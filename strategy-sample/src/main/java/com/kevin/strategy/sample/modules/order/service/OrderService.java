@@ -9,8 +9,8 @@ import com.kevin.strategy.sample.modules.order.entity.dto.OrderDTO;
  */
 public interface OrderService {
 
-    /**
-     *
-     */
-    double discount(OrderDTO orderDTO);
+  /**
+   *
+   */
+  double discount(OrderDTO orderDTO);
 }
