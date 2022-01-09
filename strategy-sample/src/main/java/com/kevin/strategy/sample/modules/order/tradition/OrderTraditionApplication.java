@@ -1,18 +1,18 @@
-package com.kevin.strategy.sample.modules.order;
+package com.kevin.strategy.sample.modules.order.tradition;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.kevin.strategy.sample.configuration.ApplicationModuleConfiguration;
-import com.kevin.strategy.sample.modules.order.entity.dto.OrderDTO;
-import com.kevin.strategy.sample.modules.order.service.OrderService;
-import com.kevin.strategy.sample.modules.order.service.factory.OrderServiceFactory;
+import com.kevin.strategy.sample.modules.order.tradition.entity.dto.OrderDTO;
+import com.kevin.strategy.sample.modules.order.tradition.service.factory.OrderServiceFactory;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import com.kevin.strategy.sample.modules.order.tradition.service.OrderService;
 
 /**
  * @author kevin
  */
-public class OrderApplication {
+public class OrderTraditionApplication {
 
   public static void main(String[] args) {
 
@@ -30,3 +30,4 @@ public class OrderApplication {
 
   }
 }
+
