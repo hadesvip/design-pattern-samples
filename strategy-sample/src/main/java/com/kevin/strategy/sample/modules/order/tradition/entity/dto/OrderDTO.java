@@ -3,12 +3,21 @@ package com.kevin.strategy.sample.modules.order.tradition.entity.dto;
 import com.kevin.strategy.sample.common.utils.GsonUtil;
 import java.math.BigDecimal;
 
+/**
+ * 订单信息
+ *
+ * @author kevin
+ */
 public class OrderDTO {
 
-
+  /**
+   * 订单号
+   */
   private String orderNo;
 
-
+  /**
+   * 价格
+   */
   private BigDecimal price;
 
 
