@@ -8,11 +8,14 @@
   <groupId>com.kevin</groupId>
   <artifactId>design-pattern-samples</artifactId>
   <version>1.0</version>
-  <modules>
-    <module>strategy-sample</module>
-  </modules>
   <name>design-pattern-samples</name>
   <packaging>pom</packaging>
+
+
+  <modules>
+    <module>strategy-sample</module>
+    <module>chain-sample</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
